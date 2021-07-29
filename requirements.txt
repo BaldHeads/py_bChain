@@ -1,0 +1,4 @@
+web3
+bit
+pp-ez
+python-dotenv
