@@ -24,4 +24,23 @@ Install the HD Wallet Derive tool by following the following instructions after 
 
 
 
-### Test Transactions
+## Test Transactions
+
+---
+#### BTCTEST
+- Prefunding the btctest account
+![prefund](./screenshots/btctest_fund.JPG)
+
+- python code to send transaction in terminal
+![btctest_txn](./screenshots/btctest_send_txn.JPG)
+
+-confirmation of successful transaction
+![btctest_txn](./screenshots/btctest_confirm.JPG)
+![btctest_txn](./screenshots/btctest_confirm2.JPG)
+
+---
+#### ETH
+- python code to send transaction in terminal
+![eth_txn](./screenshots/eth_send_txn.JPG)
+-confirmation of successful transaction
+![eth_txn](./screenshots/eth_txn_success.JPG)
