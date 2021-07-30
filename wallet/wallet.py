@@ -18,8 +18,8 @@ from constants import *
 
 # middleware components for poa
 w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
-from web3.middleware import geth_poa_middleware
-w3.middleware_onion.inject(geth_poa_middleware, layer=0)
+# from web3.middleware import geth_poa_middleware
+# w3.middleware_onion.inject(geth_poa_middleware, layer=0)
  
 # Create a function called `derive_wallets`
 def derive_wallets(mnemonic, coin, numderive):
@@ -67,13 +67,14 @@ def create_tx(coin, account, to, amount):
     elif coin == ETH:
         estGas = w3.eth.estimateGas({"from": ETH_acc.address, "to": to, "value": amount})
         return {
+            "chainId": 1111,
             "to": to,
             "from": ETH_acc.address,
             "value": amount,
             "gas": estGas,
             "gasPrice": w3.eth.gasPrice,
-            "nonce": w3.eth.getTransactionCount(ETH_acc.address),
-            "chainID": 123
+            "nonce": w3.eth.getTransactionCount(ETH_acc.address)
+            #"chainID": 1111
         }
 
 
